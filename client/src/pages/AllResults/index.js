@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { SET_ERROR } from '../../redux/constants';
-require('dotenv').config()
 
 const AllResults = () => {
     const dispatch = useDispatch();
@@ -13,7 +12,7 @@ const AllResults = () => {
     useEffect(() => {
         const getScores = async () => {
             try {
-                const { data } = await axios.get(`${process.env.API_URL}/score`);
+                const { data } = await axios.get(`${API_URL}/score`);
                 setAllScores(data);
             } catch (error) {
                 console.error(`Error getting scores from server `, error.message);
