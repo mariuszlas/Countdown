@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { SET_ERROR } from '../../redux/constants';
+require('dotenv').config()
 
 const AllResults = () => {
     const dispatch = useDispatch();
