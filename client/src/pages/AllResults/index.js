@@ -12,7 +12,7 @@ const AllResults = () => {
     useEffect(() => {
         const getScores = async () => {
             try {
-                const { data } = await axios.get(`${API_URL}/score`);
+                const { data } = await axios.get(`${process.env.API_URL}/score`);
                 setAllScores(data);
             } catch (error) {
                 console.error(`Error getting scores from server `, error.message);
