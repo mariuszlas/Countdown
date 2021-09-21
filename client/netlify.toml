@@ -1,9 +1,7 @@
 [build]
     command = "npm run build"
     publish = "/build"
-
-[build.environment]
-    API_URL = "https://countdown-quiz-api.herokuapp.com/"
+    environment = { API_URL = "https://countdown-quiz-api.herokuapp.com/" }
 
 [[redirects]]
     from = "/*"
