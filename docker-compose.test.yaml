@@ -1,4 +1,5 @@
 services:
+    
     api:
         container_name: countdown_test_api
         environment:
@@ -11,14 +12,6 @@ services:
         depends_on:
             - db
         tty: true
-
-    socket:
-        container_name: countdown_dev_socket
-        ports:
-            - 5000:5000
-        environment:
-            - NODE_ENV=development
-        command: bash -c "npm install && npm run dev"
 
     db:
         container_name: countdown_test_db

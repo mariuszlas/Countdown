@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { updateSocket, addQuestions, addPlayer, updateGameSettings, setError } from '../../redux/actions.js';
 
-const url = 'http://localhost:5001';
+const url = 'http://localhost:3000';
 
 function WaitingRoom() {
 
@@ -32,8 +32,6 @@ function WaitingRoom() {
                                 });
 
         socket.on('entry-denied', err => dispatch(setError(err)));
-
-        socket.on('questions', questions => dispatch(addQuestions(questions)));
 
         // add the player that has just joined the room
         socket.on('new-player-in-room', player => {

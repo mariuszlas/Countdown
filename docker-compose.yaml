@@ -1,20 +1,13 @@
 version: '3'
 
 services:
+
     api:
         image: node:latest
         working_dir: /code
         volumes:
             - type: bind
               source: ./api
-              target: /code
-
-    socket:
-        image: node:latest
-        working_dir: /code
-        volumes:
-            - type: bind
-              source: ./socket
               target: /code
 
     db:
