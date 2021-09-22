@@ -33,6 +33,8 @@ function WaitingRoom() {
 
         socket.on('entry-denied', err => dispatch(setError(err)));
 
+        socket.on('questions', questions => dispatch(addQuestions(questions)));
+
         // add the player that has just joined the room
         socket.on('new-player-in-room', player => {
             if (player.username !== username) {

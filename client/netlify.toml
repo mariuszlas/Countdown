@@ -1,7 +1,7 @@
 [build]
     command = "npm run build"
     publish = "/build"
-    environment = { REACT_APP_API_URL = "https://countdown-quiz-api.herokuapp.com/" }
+    environment = { API_URL = "https://countdown-quiz-api.herokuapp.com/" }
 
 [[redirects]]
     from = "/*"

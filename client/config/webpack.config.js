@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ROOT_DIRECTORY = path.join(__dirname, '../'); // the root of your project
@@ -27,6 +28,9 @@ const config = {
             // used to add the JavaScript code to the HTML
             template: path.join(PUBLIC_DIRECTORY, 'index.html'),
         }),
+        new webpack.DefinePlugin({
+            "process.env.API_URL": JSON.stringify("https://countdown-quiz-api.herokuapp.com")
+        })
     ],
     module: {
       // helpers we want webpack to use
