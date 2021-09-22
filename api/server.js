@@ -2,7 +2,7 @@ const { Server } = require('socket.io');
 const express = require('express');
 const http = require('http');
 const cors = require('cors');
-const { fetchQuestions } = require('./ws/helpers.js');
+const { fetchQuestions } = require('./helpers.js');
 const router = require('./routes/router.js');
 
 //------------------- CREATE HTTP SERVER ---------------------//
